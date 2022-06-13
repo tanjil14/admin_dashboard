@@ -14,10 +14,12 @@ import "./sidebarCenterList.scss";
 const SidebarCenterList = () => {
   return (
     <ul>
+        <p className="title">MAIN</p>
       <li>
         <DashboardIcon className="icon" />
         <span>Dashboard</span>
       </li>
+      <p className="title">LISTS</p>
       <li>
         <PersonOutlineOutlinedIcon className="icon" />
         <span>Users</span>
@@ -34,6 +36,7 @@ const SidebarCenterList = () => {
         <LocalShippingIcon className="icon" />
         <span>Delivery</span>
       </li>
+      <p className="title">USEFULL</p>
       <li>
         <InsertChartIcon className="icon" />
         <span>Stats</span>
@@ -42,6 +45,7 @@ const SidebarCenterList = () => {
         <NotificationsNoneIcon className="icon" />
         <span>Notifications</span>
       </li>
+      <p className="title">SERVICE</p>
       <li>
         <MonitorHeartOutlinedIcon className="icon" />
         <span>System Health</span>
@@ -54,6 +58,7 @@ const SidebarCenterList = () => {
         <SettingsApplicationsIcon className="icon" />
         <span>Setting</span>
       </li>
+      <p className="title">USER</p>
       <li>
         <AccountCircleOutlinedIcon className="icon" />
         <span>Profile</span>
