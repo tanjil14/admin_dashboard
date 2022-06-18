@@ -1,14 +1,17 @@
+import { Link } from "react-router-dom";
 import "./sidebar.scss";
-import SidebarCenterList from "./sidebarCenterList/SidebarCenterList.jsx"
+import SidebarCenterList from "./sidebarCenterList/SidebarCenterList.jsx";
 const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="top">
-        <span className="logo">tanjiladmin</span>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <span className="logo">tanjiladmin</span>
+        </Link>
       </div>
       <hr />
       <div className="center">
-        <SidebarCenterList/>
+        <SidebarCenterList />
       </div>
       <div className="bottom">
         <div className="colorOption"></div>

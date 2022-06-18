@@ -10,24 +10,31 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
 import SettingsApplicationsIcon from "@mui/icons-material/SettingsApplications";
 import StoreIcon from "@mui/icons-material/Store";
+import { Link } from "react-router-dom";
 import "./sidebarCenterList.scss";
 const SidebarCenterList = () => {
   return (
     <ul>
-        <p className="title">MAIN</p>
+      <p className="title">MAIN</p>
       <li>
         <DashboardIcon className="icon" />
-        <span>Dashboard</span>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <span>Dashboard</span>
+        </Link>
       </li>
       <p className="title">LISTS</p>
-      <li>
-        <PersonOutlineOutlinedIcon className="icon" />
-        <span>Users</span>
-      </li>
-      <li>
-        <StoreIcon className="icon" />
-        <span>Products</span>
-      </li>
+      <Link to="/users" style={{ textDecoration: "none" }}>
+        <li>
+          <PersonOutlineOutlinedIcon className="icon" />
+          <span>Users</span>
+        </li>
+      </Link>
+      <Link to="/products" style={{ textDecoration: "none" }}>
+        <li>
+          <StoreIcon className="icon" />
+          <span>Products</span>
+        </li>
+      </Link>
       <li>
         <CreditCardIcon className="icon" />
         <span>Orders</span>
