@@ -1,6 +1,7 @@
+import Chart from "../../components/chart/Chart.jsx";
 import Navbar from "../../components/navbar/Navbar";
 import Sidebar from "../../components/sidebar/Sidebar";
-import Chart from "../../components/chart/Chart"
+import Table from "../../components/table/Table";
 import "./single.scss";
 const Single = () => {
   return (
@@ -19,32 +20,37 @@ const Single = () => {
                 alt=""
                 className="itemImg"
               />
-             <div className="details">
+              <div className="details">
                 <h1 className="itemTitle">Jane Doe</h1>
                 <div className="detailItem">
-                    <span className="itemKey">Email:</span>
-                    <span className="itemValue">janedoe@gamil.com</span>
+                  <span className="itemKey">Email:</span>
+                  <span className="itemValue">janedoe@gamil.com</span>
                 </div>
                 <div className="detailItem">
-                    <span className="itemKey">Phone:</span>
-                    <span className="itemValue">+88123456789</span>
+                  <span className="itemKey">Phone:</span>
+                  <span className="itemValue">+88123456789</span>
                 </div>
                 <div className="detailItem">
-                    <span className="itemKey">Address:</span>
-                    <span className="itemValue">Elton St. 234 Garden Yd. NewYork</span>
+                  <span className="itemKey">Address:</span>
+                  <span className="itemValue">
+                    Elton St. 234 Garden Yd. NewYork
+                  </span>
                 </div>
                 <div className="detailItem">
-                    <span className="itemKey">Country:</span>
-                    <span className="itemValue">USA</span>
+                  <span className="itemKey">Country:</span>
+                  <span className="itemValue">USA</span>
                 </div>
-             </div>
+              </div>
             </div>
           </div>
           <div className="right">
-            <Chart/>
+            <Chart aspect={3 / 1} title="User Spending (Last 6 Months)" />
           </div>
         </div>
-        <div className="bottom"></div>
+        <div className="bottom">
+          <h1 className="title">Last Transactions</h1>
+          <Table />
+        </div>
       </div>
     </div>
   );
