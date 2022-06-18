@@ -1,7 +1,10 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { DarkModeContext } from "../../context/darkModeContext";
 import "./sidebar.scss";
 import SidebarCenterList from "./sidebarCenterList/SidebarCenterList.jsx";
 const Sidebar = () => {
+  const { dispatch } = useContext(DarkModeContext);
   return (
     <div className="sidebar">
       <div className="top">
@@ -14,8 +17,14 @@ const Sidebar = () => {
         <SidebarCenterList />
       </div>
       <div className="bottom">
-        <div className="colorOption"></div>
-        <div className="colorOption"></div>
+        <div
+          onClick={() => dispatch({ type: "LIGHT" })}
+          className="colorOption"
+        ></div>
+        <div
+          onClick={() => dispatch({ type: "DARK" })}
+          className="colorOption"
+        ></div>
       </div>
     </div>
   );

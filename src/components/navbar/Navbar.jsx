@@ -7,9 +7,12 @@ import {
   NotificationsNoneOutlined,
   SearchOutlined,
 } from "@mui/icons-material";
-import img from "../../img/_MG_3023.jpg"
+import { useContext } from "react";
+import { DarkModeContext } from "../../context/darkModeContext";
+import img from "../../img/_MG_3023.jpg";
 import "./navbar.scss";
 const Navbar = () => {
+  const { dispatch } = useContext(DarkModeContext);
   return (
     <div className="navbar">
       <div className="wrapper">
@@ -19,28 +22,28 @@ const Navbar = () => {
         </div>
         <div className="items">
           <div className="item">
-            <LanguageOutlined className="icon"/>
+            <LanguageOutlined className="icon" />
             English
           </div>
-          <div className="item">
-            <DarkModeOutlined className="icon"/>
+          <div onClick={() => dispatch({ type: "TOGGLE" })} className="item">
+            <DarkModeOutlined className="icon" />
           </div>
           <div className="item">
-            <FullscreenExitOutlined className="icon"/>
+            <FullscreenExitOutlined className="icon" />
           </div>
           <div className="item">
-            <NotificationsNoneOutlined className="icon"/>
+            <NotificationsNoneOutlined className="icon" />
             <div className="counter">1</div>
           </div>
           <div className="item">
-            <ChatBubbleOutlineOutlined className="icon"/>
+            <ChatBubbleOutlineOutlined className="icon" />
             <div className="counter">2</div>
           </div>
           <div className="item">
-            <ListOutlined className="icon"/>
+            <ListOutlined className="icon" />
           </div>
           <div className="item">
-            <img src={img} alt="" className="avatar"/>
+            <img src={img} alt="" className="avatar" />
           </div>
         </div>
       </div>
